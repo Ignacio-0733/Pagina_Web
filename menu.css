@@ -1,0 +1,905 @@
+/*Menu*/
+.menuarriba {
+  width: 100%;
+  height: 100px;
+  border: 2px solid black;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0 30px;
+}
+.menuarriba .brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;               
+}
+.menuarriba img {
+  display: block;
+}
+.menuarriba .links {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-right: 20px; 
+  margin-right: 70px;
+  position: relative;   
+}
+/*MARCA LOS NIVELES*/
+.submenu{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  min-width: 150px;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+/*POSICIONAMIENTO ESPECIFICO DE CADA NIVEL*/
+.submenu .nivel2{
+  top:100%;
+  left:0%;
+}
+
+.submenu .nivel3{
+  top:0%;
+  left:100%;
+  margin-left:2px;
+}
+
+
+/*EL HOVER SOLO MUESTRA EL NIVEL DIRECTO*/
+.submenu-container:hover > .submenu{
+  display: flex;
+}
+
+/*ESTILOS DENTRO DE LOS SUBMENUS*/
+.submenu a,.submenu-item{
+  display: block;
+  padding: 24px 15px;
+  color: #D4AF37;
+  text-decoration: none;
+}
+/*ESTILO DENTRO DE LOS SUBMENUS CUANDO PASAMOS POR ENCIMA EL RATON*/
+.submenu a:hover,.submenu-item:hover{
+  background: black;
+}
+.palabrarriba {
+  font-size: 25px;
+  color: #D4AF37;
+  position: relative;
+  cursor: pointer;
+}
+.casino {
+  color: #D4AF37;
+  font-size: 30px;
+  font-weight: 600;
+}
+.contenido{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+.final {
+  width: 100vw;                     
+  margin-left: calc(50% - 50vw);    
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 10px 12px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  font-size: 14px;
+}
+
+/*-----------MENU PRINCIPAL--------------*/
+.cuerpo_background{
+  background-image: url(Posible_fondo_Casino.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width:100%;
+}
+/*PARTE CONTENIDO MENU PRINCIPAL*/
+.cuerpo_intro{
+  width: 75%;              /* ancho de la franja */
+  margin: 0 auto;          /* la centra horizontalmente */
+  background-color:#ddd; /* negro semitransparente */
+  min-height: 100vh;       /* que ocupe toda la altura */
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+.titulo_cuerpo{
+  font-family: 'Georgia', serif;
+  font-size: 60px;
+  text-align: center;
+  color: #D4AF37;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    2px 2px 5px rgba(0,0,0,0.8);
+}
+
+.texto_intro{
+  width: 75%;
+  margin: 40px auto;
+  padding: 30px 40px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  border-radius: 8px;
+}
+
+.slogan1{
+  text-align: center;
+  font-size: 20px;
+  text-align: center;
+  color: #D4AF37;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    2px 2px 2px rgba(0,0,0,0.8);
+}
+
+strong{
+  color:#D4AF37;
+}
+
+.titulo_extras
+{
+  text-align: center;
+}
+.intro_discoteca_titulo,.intro_restaurante_titulo,.intro_parking_titulo{
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    2px 2px 5px rgba(0,0,0,0.8);
+}
+
+/*Carrusel de imagenes MENU PRINCIPAL*/
+.uno_menu{
+  margin:0 auto;
+  width:800px;
+  height:500px;
+  background-color: black;
+  overflow:hidden;
+}
+   
+.dos_menu{
+  margin:auto;
+  width:2200px;
+  height:700px;
+}
+   
+.tres_menu{  
+  animation:banner 30s linear infinite;      
+}
+/*-------Futbol------------*/
+.equipoa{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.arriba{
+  font-size: 18px;
+  font-weight: bold;
+}
+.botones{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.botones button{
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.contenedor-ligas{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  gap: 20px;
+}
+.liga, .premier{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cuadro{
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+}
+.contenido{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.info{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.hora{
+    grid-column: 1 / 4;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.eqipoa{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.eqipoa img{
+  border-radius: 50%;
+}
+.vs{
+  font-weight: bold;
+  font-size: 18px;
+}
+.botones{
+display: flex;
+justify-content: space-between;
+gap: 10px;
+}
+.botones button{
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #ff0000;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.botones button:hover{
+  background: #fa0000;
+}
+/*Discoteca*/
+.discoteca{
+  text-align: center;
+}
+.fotodisco{
+  text-align: center;
+}
+.proxa{
+  text-align: center;
+}
+.artistas {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 40px;
+}
+.cuadroartistas {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid yellow;
+  background-color: #fff;
+}
+.cuadroartistas img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.cuadroartistas p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+/*Parking*/
+.parking{
+  text-align: center;
+}
+/*Formularios*/
+.formulario {
+  max-width: 600px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #444;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+}
+.btn-pagar {
+width: 100%;
+padding: 15px;
+background: #0078ff;
+color: white;
+border: none;
+border-radius: 10px;
+font-size: 18px;
+cursor: pointer;
+ transition: 0.2s;
+}
+.btn-pagar:hover {
+background: #005fcc;
+}
+/*F1*/
+.equipos-f1 {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 150px;
+}
+.equipos-f1_pilotos {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.equipo {
+  background: #f8f8f8;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.equipo img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.equipo h3 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: #333;
+}
+.btn-seleccionar {
+  width: 100%;
+  padding: 12px;
+  background: #fa0015;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-seleccionar:hover {
+  background: #000000;
+}
+.gpaus{
+  text-align: center;
+}
+.constructores{
+  text-align: center;
+}
+
+/*PARTE RESTAURANTE*/
+.cuerporest{
+    color:red;
+    display:flex;
+    justify-content: center;
+}
+
+.textorest{
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+}
+
+.winston,.tiyl,.caviar,.tartar,.lomo_wagyu,.solomillo{
+    display:flex;
+    flex-direction: row;
+
+}
+.bebidasrest,.entrantes_rest,.comidas_rest{
+    display:flex;
+    flex-direction: column;
+    margin:8%;
+}
+.textwinston,.texttiyl,.textcaviar,.texttartar,.textwagyu,.textsolom{
+    margin-left:5%;
+    margin-right:5%;
+}
+/*Carrusel de imagenes*/
+.uno{
+  margin:0 auto;
+  width:1000px;
+  height:700px;
+  background-color: black;
+  overflow:hidden;
+}
+   
+.dos{
+  margin:auto;
+  width:2200px;
+  height:700px;
+}
+   
+.tres{  
+  animation:banner 30s linear infinite;      
+}
+ 
+@keyframes banner{from{margin-left:0px;}to{margin-left:-3200px;}}
+
+/*---------INICIO CSS POKER--------*/
+.cuerpo_background{
+  background-image: url(Posible_fondo_Casino.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width:100%;
+}
+.cuerpo_poker{
+  width: 75%;              /* ancho de la franja */
+  margin: 0 auto;          /* la centra horizontalmente */
+  background-color:#ddd; /* negro semitransparente */
+  min-height: 100vh;       /* que ocupe toda la altura */
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+.intro_1_poker{
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #D4AF37;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    1px 1px 1px rgba(0,0,0,0.8);
+}
+.foto1poker{
+    text-align: center;
+}
+
+.texto1_poker{
+  width: 75%;
+  margin: 40px auto;
+  padding: 30px 40px;
+
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+.slogan_poker{
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  color: #D4AF37; /* dorado */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+.linea2{
+  display:flex;
+  flex-direction: row;
+}
+.reglas_poker{
+  font-size: 20px;
+  line-height: 1.7;
+}
+/*Carrusel Poker*/
+.uno_poker{
+  margin:0 auto;
+  width:800px;
+  height:500px;
+  background-color: black;
+  overflow:hidden;
+ }
+   
+   
+.dos_poker{
+  margin:auto;
+  width:2200px;
+  height:700px;
+}
+   
+.tres_poker{  
+  animation:banner 40s linear infinite;      
+}
+ 
+@keyframes banner{from{margin-left:0px;}to{margin-left:-4000px;}}
+
+/*DISEÑO BOTON JUGAR*/
+.caja_boton_jugar{
+  text-align: center;
+}
+
+.boton_jugar{
+  text-align: center;
+  padding: 14px 40px;           /* más pequeño que antes */
+  font-size: 40px;            /* tamaño moderado */
+  font-weight: bold;
+  color: #000000;               
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color:#e8bb29;
+  border-radius: 8px;           /* bordes suaves pero no exagerados */
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.5),          /* sombra suave para profundidad */
+    inset 0 1px 3px rgba(255, 255, 255, 0.3); /* luz interna ligera */
+  cursor: pointer;
+  transition: all 0.2s ease;    /* solo transición suave al hover */
+}
+
+.boton_jugar:hover {
+  background-color:#d8a524;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+/*FINAL CSS POKER*/
+
+/*---------INICIO DE BLACKJACK-----------*/
+.cuerpo_blackjack{
+  width: 75%;              /* ancho de la franja */
+  margin: 0 auto;          /* la centra horizontalmente */
+  background-color:#ddd; /* negro semitransparente */
+  min-height: 100vh;       /* que ocupe toda la altura */
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+.intro_1_blackjack{
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #D4AF37; /* dorado */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+.foto1blackjack{
+  text-align: center;
+}
+
+.texto1_blackjack{
+  width: 75%;
+  margin: 40px auto;
+  padding: 30px 40px;
+
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+.slogan_blackjack{
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  color: #D4AF37; /* dorado */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+
+/*Carrusel Blackjack*/
+.uno_blackjack{
+  margin:0 auto;
+  width:800px;
+  height:500px;
+  background-color: black;
+  overflow:hidden;
+ }
+   
+   
+.dos_blackjack{
+  margin:auto;
+  width:2200px;
+  height:700px;
+}
+   
+.tres_blackjack{  
+  animation:banner_blackjack 40s linear infinite;      
+}
+
+@keyframes banner_blackjack{from{margin-left:0px;}to{margin-left:-4000px;}}
+
+/*FINAL DE BLACKJACK*/
+
+/*--------INICIO SET-POKER----------*/
+.intro_1_set_poker{
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #D4AF37;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    1px 1px 1px rgba(0,0,0,0.8);
+}
+.foto1_setpoker{
+    text-align: center;
+}
+
+.texto1_set_poker{
+  width: 75%;
+  margin: 40px auto;
+  padding: 30px 40px;
+
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: 'Georgia', serif;
+}
+
+.slogan_set_poker{
+  text-align: center;
+  font-size: 40px;
+  text-align: center;
+  color: #D4AF37; /* dorado */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+.linea2{
+  display:flex;
+  flex-direction: row;
+}
+.reglas_set_poker{
+  font-size: 20px;
+  line-height: 1.7;
+}
+/*Carrusel Poker*/
+.uno_set_poker{
+  margin:0 auto;
+  width:800px;
+  height:500px;
+  background-color: black;
+  overflow:hidden;
+ }
+   
+   
+.dos_set_poker{
+  margin:auto;
+  width:2200px;
+  height:700px;
+}
+   
+.tres_set_poker{  
+  animation:banner_set_poker 40s linear infinite;      
+}
+ 
+@keyframes banner_set_poker{from{margin-left:0px;}to{margin-left:-4000px;}}
+
+
+/*FINAL CSS SET-POKER*/
+
+/*ANIMACIONES*/
+/* =============================
+   OVERLAY A PANTALLA COMPLETA
+   ============================= */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(ellipse at center, #111 0%, #000 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFadeOut 1s ease forwards;
+  animation-delay: 2.5s; /* tiempo visible antes de desaparecer */
+  pointer-events: none; /* no bloquea nada */
+}
+
+/* Título animado */
+.intro-titulo {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #D4AF37;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 
+      0 4px 18px rgba(0,0,0,0.6), 
+      0 0 24px rgba(212,175,55,0.35);
+
+  /* Tamaño gigante y responsivo */
+  font-size: clamp(3rem, 10vw + 1rem, 12rem);
+
+  animation: zoomInShrink 2s ease-out forwards;
+  transform-origin: center;
+}
+/* Entrada del título */
+@keyframes zoomInShrink {
+  0% {
+    transform: scale(4);
+    opacity: 0;
+    filter: blur(5px);
+  }
+  40% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Salida automática del overlay */
+@keyframes overlayFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Evitar scroll mientras aparece */
+body.intro-lock {
+  overflow: hidden;
+}
+
+
+
+/* ============================================================
+   📌 MEDIA QUERY PARA PC (≤1300px)
+============================================================ */
+@media (max-width: 1300px) {
+
+  .menuarriba {
+    height: 90px;
+    padding: 0 20px;
+  }
+
+  .links {
+    gap: 30px;
+    margin-right: 20px;
+  }
+
+  .palabrarriba {
+    font-size: 22px;
+  }
+
+  .casino {
+    font-size: 26px;
+  }
+
+  .contenedor-ligas {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .equipos-f1 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+  }
+}
+
+
+/* ============================================================
+   📱 MEDIA QUERY PARA MÓVIL (≤600px)
+============================================================ */
+@media (max-width: 600px) {
+
+  .menuarriba {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .casino {
+    font-size: 22px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .palabrarriba {
+    font-size: 20px;
+  }
+
+  .submenu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .submenu a {
+    padding: 12px;
+  }
+
+  .contenedor-ligas {
+    grid-template-columns: 1fr;
+  }
+
+  .equipos-f1 {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .equipos-f1_pilotos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .uno {
+    width: 100%;
+    height: auto;
+  }
+
+  .dos {
+    width: 100%;
+  }
+}
+
