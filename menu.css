@@ -163,7 +163,9 @@ strong{
 {
   text-align: center;
 }
-.intro_discoteca_titulo,.intro_restaurante_titulo,.intro_parking_titulo{
+
+/*DISEÑOS TITULO DE ESPACIOS EXTRA*/
+.intro_discoteca_titulo,.intro_restaurante_titulo,.intro_parking_titulo,.titulorest {
   font-size: 20px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -174,21 +176,28 @@ strong{
 /*Carrusel de imagenes MENU PRINCIPAL*/
 .uno_menu{
   margin:0 auto;
-  width:800px;
-  height:500px;
+  width:1000px;
+  height:700px;
   background-color: black;
   overflow:hidden;
+
 }
    
 .dos_menu{
-  margin:auto;
-  width:2200px;
-  height:700px;
+  height: 100%;
+  display: flex;
+  --n: 4;                
+  --dur: 24s;            
+  animation: slide var(--dur) steps(var(--n)) infinite;
+
 }
    
 .tres_menu{  
-  animation:banner 30s linear infinite;      
+  animation:banner_index 30s linear infinite;      
 }
+
+@keyframes banner_index{from{margin-left:0px;}to{margin-left:-3200px;}}
+
 /*-------Futbol------------*/
 .equipoa{
   display: flex;
@@ -313,11 +322,11 @@ gap: 10px;
   margin-top: 10px;
   font-size: 14px;
 }
-/*Parking*/
+/*-----------Parking------------*/
 .parking{
   text-align: center;
 }
-/*Formularios*/
+/*-----------Formularios-----------*/
 .formulario {
   max-width: 600px;
   margin: auto;
@@ -377,7 +386,7 @@ cursor: pointer;
 .btn-pagar:hover {
 background: #005fcc;
 }
-/*F1*/
+/*---------F1-----------*/
 .equipos-f1 {
   width: 90%;
   max-width: 600px;
@@ -438,34 +447,46 @@ background: #005fcc;
   text-align: center;
 }
 
-/*PARTE RESTAURANTE*/
+/*----------PARTE RESTAURANTE----------*/
 .cuerporest{
-    color:red;
-    display:flex;
-    justify-content: center;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+.titulorest{
+  font-family: 'Georgia', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #D4AF37;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 
+    1px 1px 1px rgba(0,0,0,0.8);
 }
 
 .textorest{
-    display:flex;
-    flex-direction: column;
-    text-align:center;
+  display:flex;
+  flex-direction: column;
+  text-align:center;
 }
 
-.winston,.tiyl,.caviar,.tartar,.lomo_wagyu,.solomillo{
-    display:flex;
-    flex-direction: row;
-
+.winston,.tiyl,.caviar,.tartar,.lomo_wagyu,.solomillo,.mousse_choco,.kakigori{
+  display:flex;
+  flex-direction: row;
+  margin-top:3%;
 }
-.bebidasrest,.entrantes_rest,.comidas_rest{
+.bebidasrest,.entrantes_rest,.comidas_rest,.postre_rest{
     display:flex;
     flex-direction: column;
-    margin:8%;
+    margin:2%;
+
 }
-.textwinston,.texttiyl,.textcaviar,.texttartar,.textwagyu,.textsolom{
-    margin-left:5%;
-    margin-right:5%;
+.textwinston,.texttiyl,.textcaviar,.texttartar,.textwagyu,.textsolom,.textmousse,.textkakigori{
+    margin-left: 5%;
+    margin-right: 5%;
 }
-/*Carrusel de imagenes*/
+
+/*Carrusel de imagenes principal*/
 .uno{
   margin:0 auto;
   width:1000px;
@@ -475,16 +496,20 @@ background: #005fcc;
 }
    
 .dos{
-  margin:auto;
-  width:2200px;
-  height:700px;
+
+  height: 100%;
+  display: flex;
+  --n: 4;                
+  --dur: 24s;            
+  animation: slide var(--dur) steps(var(--n)) infinite;
+
 }
    
 .tres{  
-  animation:banner 30s linear infinite;      
+  animation:banner_resta 30s linear infinite;      
 }
  
-@keyframes banner{from{margin-left:0px;}to{margin-left:-3200px;}}
+@keyframes banner_resta{from{margin-left:0px;}to{margin-left:-3200px;}}
 
 /*---------INICIO CSS POKER--------*/
 .cuerpo_background{
@@ -558,9 +583,13 @@ background: #005fcc;
    
    
 .dos_poker{
-  margin:auto;
-  width:2200px;
-  height:700px;
+
+  height: 100%;
+  display: flex;
+  --n: 4;                
+  --dur: 24s;            
+  animation: slide var(--dur) steps(var(--n)) infinite;
+
 }
    
 .tres_poker{  
@@ -576,19 +605,18 @@ background: #005fcc;
 
 .boton_jugar{
   text-align: center;
-  padding: 14px 40px;           /* más pequeño que antes */
-  font-size: 40px;            /* tamaño moderado */
+  padding: 14px 40px;           
   font-weight: bold;
   color: #000000;               
   text-transform: uppercase;
   letter-spacing: 1.5px;
   background-color:#e8bb29;
-  border-radius: 8px;           /* bordes suaves pero no exagerados */
+  border-radius: 8px;           
   box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.5),          /* sombra suave para profundidad */
-    inset 0 1px 3px rgba(255, 255, 255, 0.3); /* luz interna ligera */
+    0 4px 12px rgba(0, 0, 0, 0.5),          
+    inset 0 1px 3px rgba(255, 255, 255, 0.3); 
   cursor: pointer;
-  transition: all 0.2s ease;    /* solo transición suave al hover */
+  transition: all 0.2s ease;    
 }
 
 .boton_jugar:hover {
@@ -654,9 +682,13 @@ background: #005fcc;
    
    
 .dos_blackjack{
-  margin:auto;
-  width:2200px;
-  height:700px;
+
+  height: 100%;
+  display: flex;
+  --n: 4;                
+  --dur: 24s;            
+  animation: slide var(--dur) steps(var(--n)) infinite;
+
 }
    
 .tres_blackjack{  
@@ -720,9 +752,13 @@ background: #005fcc;
    
    
 .dos_set_poker{
-  margin:auto;
-  width:2200px;
-  height:700px;
+
+  height: 100%;
+  display: flex;
+  --n: 4;                
+  --dur: 24s;            
+  animation: slide var(--dur) steps(var(--n)) infinite;
+
 }
    
 .tres_set_poker{  
@@ -735,9 +771,6 @@ background: #005fcc;
 /*FINAL CSS SET-POKER*/
 
 /*ANIMACIONES*/
-/* =============================
-   OVERLAY A PANTALLA COMPLETA
-   ============================= */
 .intro-overlay {
   position: fixed;
   inset: 0;
@@ -804,102 +837,410 @@ body.intro-lock {
 
 
 
-/* ============================================================
-   📌 MEDIA QUERY PARA PC (≤1300px)
-============================================================ */
-@media (max-width: 1300px) {
+/* ================================
+   AJUSTES GLOBALES RESPONSIVE
+   ================================ */
 
-  .menuarriba {
-    height: 90px;
-    padding: 0 20px;
-  }
-
-  .links {
-    gap: 30px;
-    margin-right: 20px;
-  }
-
-  .palabrarriba {
-    font-size: 22px;
-  }
-
-  .casino {
-    font-size: 26px;
-  }
-
-  .contenedor-ligas {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .equipos-f1 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
-  }
+/* Imágenes fluidas por defecto */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
+/* Contenedores grandes en páginas de contenido */
+.cuerpo_intro,
+.cuerpo_poker,
+.cuerpo_blackjack {
+  max-width: 1200px;
+}
 
-/* ============================================================
-   📱 MEDIA QUERY PARA MÓVIL (≤600px)
-============================================================ */
-@media (max-width: 600px) {
+/* Evitar viewport bleed en .final (ya lo usas bien con 100vw) */
+.final img {
+  vertical-align: middle;
+}
 
+/* ================================
+   <= 1300px — Disposición para PC
+   ================================ */
+@media (max-width: 1300px) {
+  /* Menú superior: reducir espacios para que no se rompa en 1200–1300 */
   .menuarriba {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-    gap: 10px;
+    height: 80px;
+    padding: 0 20px;
   }
-
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .casino {
-    font-size: 22px;
-  }
-
-  .links {
-    flex-direction: column;
-    gap: 15px;
-    margin-right: 0;
+  .menuarriba .links {
+    gap: 28px;
+    margin-right: 20px;
     padding-right: 0;
   }
+  .palabrarriba { font-size: 20px; }
+  .casino { font-size: 24px; }
 
-  .palabrarriba {
-    font-size: 20px;
+  /* Franjas de contenido centradas */
+  .cuerpo_intro,
+  .cuerpo_poker,
+  .cuerpo_blackjack {
+    width: 90%;
+    padding: 28px;
   }
 
-  .submenu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
+  .titulo_cuerpo h1 {
+    font-size: clamp(32px, 4vw, 48px);
   }
 
-  .submenu a {
-    padding: 12px;
+  /* Bloques de texto */
+  .texto_intro,
+  .texto1_poker,
+  .texto1_blackjack,
+  .texto1_set_poker {
+    width: 90%;
+    padding: 24px 28px;
+    font-size: 18px;
   }
 
+  /* Grids y listados (apuestas, F1, tenis) */
   .contenedor-ligas {
-    grid-template-columns: 1fr;
-  }
-
-  .equipos-f1 {
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .equipos-f1 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1000px;
+  }
+  .equipos-f1_pilotos {
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
-  .equipos-f1_pilotos {
-    grid-template-columns: 1fr 1fr;
+  /* Carruseles: ancho fluido */
+  .uno, .uno_menu, .uno_poker, .uno_blackjack, .uno_set_poker {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;          /* deja que crezca por proporción */
+    aspect-ratio: 16 / 10; /* guía de altura aproximada */
+  }
+  .dos, .dos_menu, .dos_poker, .dos_blackjack {
+
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: carrusel 20s linear infinite;
+
   }
 
-  .uno {
-    width: 100%;
-    height: auto;
+  /* Cards/cuadros */
+  .cuadro {
+    padding: 14px;
+  }
+  .info {
+    gap: 8px;
   }
 
-  .dos {
-    width: 100%;
+  /* Restaurante: columnas anchas pero no a pantalla completa */
+  .winston,.tiyl,.caviar,.tartar,.lomo_wagyu,.solomillo,.mousse_choco,.kakigori {
+    gap: 20px;
+  }
+
+  /* Tipografías algo más contenidas */
+  .slogan_poker,
+  .slogan_blackjack,
+  .slogan_set_poker {
+    font-size: clamp(24px, 3vw, 32px);
+  }
+
+  /* Formularios un poco más compactos */
+  .formulario {
+    max-width: 700px;
+    padding: 0 12px;
   }
 }
 
+/* ================================
+   <= 600px — Disposición móvil
+   ================================ */
+@media (max-width: 600px) {
+
+  /* ---------- Menú superior ---------- */
+  .menuarriba {
+    height: auto;
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+  .menuarriba .brand {
+    gap: 10px;
+  }
+  .casino {
+    font-size: 18px;
+  }
+  .menuarriba img {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Si mantienes la misma estructura, comprimimos los enlaces en varias líneas */
+  .menuarriba .links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    margin-right: 0;
+    padding-right: 0;
+    flex-wrap: wrap;
+  }
+  .palabrarriba {
+    font-size: 16px;
+    padding: 6px 0;
+  }
+
+  /* Submenús: ocupar ancho, evitar salir de pantalla */
+  .submenu {
+    position: static;
+    min-width: auto;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: none;
+  }
+  .submenu .nivel2,
+  .submenu .nivel3 {
+    position: static;
+    margin-left: 0;
+  }
+
+
+  /* ---------- Estructura de páginas ---------- */
+  .cuerpo_intro,
+  .cuerpo_poker,
+  .cuerpo_blackjack {
+    width: 100%;
+    padding: 16px;
+    min-height: auto;
+  }
+
+  .titulo_cuerpo h1,
+  .intro_1_poker h1,
+  .intro_1_blackjack h1,
+  .intro_1_set_poker h1 {
+    font-size: 28px;
+    margin: 0.25em 0;
+  }
+
+  .intro_1_poker h3,
+  .intro_1_blackjack h3,
+  .intro_1_set_poker h3 {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .texto_intro,
+  .texto1_poker,
+  .texto1_blackjack,
+  .texto1_set_poker {
+    width: 100%;
+    margin: 20px 0;
+    padding: 14px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Slogans */
+  .slogan1 h2,
+  .slogan_poker,
+  .slogan_blackjack,
+  .slogan_set_poker {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  /* ---------- Carruseles / imágenes grandes ---------- */
+  .uno, .uno_menu, .uno_poker, .uno_blackjack, .uno_set_poker {
+
+    max-width: 100%;
+    aspect-ratio: 4 / 3; /* más cuadrado en móvil */
+
+  }
+  .dos, .dos_menu, .dos_poker, .dos_blackjack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: carrusel 20s linear infinite;
+
+  }
+
+  
+/* Contenedores de carrusel */
+  .uno,
+  .uno_menu,
+  .uno_poker,
+  .uno_blackjack,
+  .uno_set_poker {
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  margin: 0 auto;
+  }
+
+
+/* Imágenes de carruseles: deben adaptarse al contenedor */
+  .uno img,
+  .uno_menu img,
+  .uno_poker img,
+  .uno_blackjack img,
+  .uno_set_poker img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* rellena sin deformar */
+  }
+
+
+  /* ---------- Apuestas fútbol / tenis (cards) ---------- */
+  .contenedor-ligas {
+    grid-template-columns: 1fr;      
+    gap: 14px;
+  }
+  .liga, .premier {
+    gap: 14px;
+  }
+  .cuadro {
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 8px;
+  }
+  .hora {
+    grid-column: 1 / -1;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .eqipoa {
+    justify-content: center;
+    gap: 6px;
+  }
+  .vs {
+    font-size: 16px;
+  }
+  .botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .botones button {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  /* ---------- F1 grids ---------- */
+  .equipos-f1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    width: 100%;
+    max-width: none;
+  }
+  .equipos-f1_pilotos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .equipo img {
+    width: 80px;
+  }
+  .equipo h3 { font-size: 16px; }
+  .btn-seleccionar { font-size: 14px; padding: 10px; }
+
+  /* ---------- Discoteca (cards artistas) ---------- */
+  .artistas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+    padding-inline: 6px;
+  }
+  .cuadroartistas {
+    width: 100%;
+    padding: 14px;
+  }
+  .cuadroartistas p {
+    font-size: 14px;
+  }
+  .cuadroartistas button a {
+    display: inline-block;
+    padding: 8px 12px;
+  }
+
+  /* ---------- Restaurante (pares → columnas) ---------- */
+  .winston,.tiyl,.caviar,.tartar,.lomo_wagyu,.solomillo,.mousse_choco,.kakigori {
+    flex-direction: column;
+    margin-top: 18px;
+  }
+  .textwinston,.texttiyl,.textcaviar,.texttartar,.textwagyu,.textsolom,.textmousse,.textkakigori{
+    margin: 10px 0 0 0;
+  }
+
+  /* ---------- Formularios ---------- */
+  .formulario {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  fieldset {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+  legend {
+    font-size: 16px;
+  }
+  label {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .btn-pagar,
+  .boton_jugar {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* ---------- Footer ---------- */
+  .final {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .final a img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* ---------- Overlay de bienvenida ---------- */
+  .intro-titulo {
+    font-size: clamp(28px, 8vw, 40px);
+    letter-spacing: 3px;
+  }
+}
+
+
+
+
+
+/* 2) Evitar colisión de @keyframes 'banner': renombra uno si es necesario.
+   Ya declaras dos 'banner' (poker y principal). Puedes unificar o dejar así
+   si cada vista carga un CSS diferente. Si todo vive junto, mejor: */
+
+/* Aplica en .tres, .tres_poker, etc. si renombraras las clases */
+
+/* 3) Clase repetida .contenido/.info: la redefiniste más abajo.
+   He mantenido los ajustes responsive para la variante de las apuestas (grid). */
+
+
+   
